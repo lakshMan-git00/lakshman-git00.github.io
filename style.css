@@ -13,6 +13,11 @@
 --section-padding : 5rem;
 
 --transition-speed : 0.03s;
+
+.contactLink img{
+     filter: invert(1);
+     transition: filter 0.3s ease;
+}
 }
 
 body.darkMode{
@@ -24,6 +29,11 @@ body.darkMode{
 
     --border-color : #333333;
     --shadow-soft : rgba(0, 0, 0, 0.3);
+
+    .contactLink img{
+        filter: none;
+        transition: filter 0.3s ease;
+    }
 }
 
 *{
@@ -357,7 +367,8 @@ body.darkMode .toggleKnob{
     height: 52px;
 
     border-radius: 50%;
-    background-color: var(--bgColor-secondary);
+    
+    background-color: var(--bgColor-primary);
 
     text-decoration: none;
     color: var(--text-primary);
@@ -366,9 +377,13 @@ body.darkMode .toggleKnob{
     transition: transform 0.3s ease, background-color var(--transition-speed), color var(--transition-speed);
 }
 
+.contactLink img{
+    width: 25px;
+    height: 25px;
+}
+
 .contactLink:hover{
     transform: translateY(-6px);
-    background-color: var(--accent-color);
     color: #ffffff;
 }
 
